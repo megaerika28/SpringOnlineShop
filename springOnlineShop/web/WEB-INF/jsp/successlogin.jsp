@@ -1,4 +1,4 @@
-<%-- 
+   <%-- 
     Document   : successlogin
     Created on : Dec 18, 2017, 3:45:16 PM
     Author     : user
@@ -16,13 +16,15 @@
         
     </head>
     <body>
-        <h1 class="jumbotron"><marquee>You Can Choose Anything For Good Day</marquee> </h1>
-        keranjang = ${totals}<br/>
+        <jsp:include page="head.jsp"></jsp:include>
+        <div class="container panel panel-info"><a href="${pageContext.request.contextPath}/keranjang"></a>${totals}</div>
+        
         <c:forEach var="dataHarga" items="${sessionScope.cart.isiKeranjang.values()}">
             <c:set var="jumlahHargaTotalBelanjaOnline" value="${jumlahHargaTotalBelanjaOnline + dataHarga.produk.productPrice}"></c:set>
                 
         </c:forEach>
-        Jumlah Biaya = ${jumlahHargaTotalBelanjaOnline};
+        <div class="container panel panel-info">Jumlah Biaya=${jumlahHargaTotalBelanjaOnline}</div> 
+        
         <jsp:include page="content.jsp"></jsp:include>
     </body>
 </html>

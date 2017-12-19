@@ -38,7 +38,7 @@ public class RegistrationController {
         user.setNoHp(register.getNoHp());
         user.setName(register.getName());
         
-//        us.saveUser(user);
+   us.saveUser(user);
                
         model.addAttribute("data", register);
         return "redirect:../login";

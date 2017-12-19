@@ -17,8 +17,52 @@ import javax.persistence.Table;
  * @author user
  */
 @Entity
-@Table (name = "APPUSER")
+@Table(name = "APPUSER")
 public class User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    private String password;
+    private String username;
+    private String email;
+    private String noHp;
+    private String name;
+    
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 0;
+        hash += (int) id;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        // TODO: Warning - this method won't work in the case the id fields are not set
+        if (!(object instanceof User)) {
+            return false;
+        }
+        User other = (User) object;
+        if (this.id != other.id) {
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return "com.shop.model.User[ id=" + id + " ]";
+    }
 
     /**
      * @return the password
@@ -90,47 +134,4 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    private static final long serialVersionUID = 1L;
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    private String password;
-    private String username;
-    private String email;
-    private String noHp;
-    private String name;
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (int) id;
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof User)) {
-            return false;
-        }
-        User other = (User) object;
-        if (this.id != other.id) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "com.shop.model.User[ id=" + id + " ]";
-    }
-    
 }

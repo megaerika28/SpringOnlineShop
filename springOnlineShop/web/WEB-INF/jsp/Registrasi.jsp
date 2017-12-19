@@ -53,7 +53,7 @@
                         <td><input type="text" name="name" value=""/></td>
                       </tr>
                       <tr>
-                          <td><input type="submit" value="Submit"/></td>
+                          <td><a href="${pageContext.request.contextPath}/register/save"><input type="submit" value="Submit"/></a></td>
                           <td<input type="reset" value="Reset"/></td>
                       </tr>
                       <tr>
