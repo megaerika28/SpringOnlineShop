@@ -5,37 +5,15 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to Spring Web MVC project</title>
+        <title>Welcome to Online Shopping</title>
     </head>
 
     <body>
-        <form method="POST" action="login.jsp">
-            <center>
-                <table border="1" width="30%" cellpadding="3">
-                    <thead>
-                        <tr>
-                            <th colspan="2"> Login Here</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> Email </td>
-                            <td><input type="text" name="email" value=""/> </td>
-                        </tr>
-                        <tr>
-                            <td>Password</td>
-                            <td><input type="password" name="password" value="" /></td>
-                        </tr>
-                        <tr>
-                            <td><input type="submit" value="Login"/></td>
-                            <td><input type="reset" value="Reset"/></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2"> yet Not Registered!! <a href="registrasi.js">Register here</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </center>
-        </form>
+        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
+        <p><i>To display a different welcome page for this project, modify</i>
+            <tt>index.jsp</tt> <i>, or create your own welcome page then change
+                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
+                welcome page and also update the welcome-file setting in</i>
+            <tt>web.xml</tt>.</p>
     </body>
 </html>
